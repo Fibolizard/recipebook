@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     $('#login_landing').click(function(){
-
+        
         window.location.href = "login.html"; 
 
 
