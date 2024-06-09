@@ -10,67 +10,66 @@ body {
     padding: 60px 20px;
     margin-top: 10px; /* Para un poco de espacio entre secciones */
 }
-.sidebar {
-    background-color: #e9ecef;
-    height: 100vh;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+#userProfile{
+
+    font-size: 25px;
+    
 }
-.sidebar a {
-    color: #000;
-    display: flex;
-    align-items: center;
-    padding: 30px 20px;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
-    border-radius: 25px;
-    margin-bottom: 10px;
+/*CSS de los resultados de búsqueda*/
+.search-results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.sidebar a:hover {
-    background-color: #dee2e6;
-    text-decoration: none;
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
-.sidebar .btn {
-    margin: 20px 0;
-    width: 100%;
+
+.result-item {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.sidebar img {
-    margin-right: 15px;
-    width: 30px;
-    height: 30px;
-}
+/*CSS de la Sidebar*/
+
+/*Botones de información */
 .custom-btn-inspirate {
-    background-color: #ec755a; /* Cambia a tu color deseado */
+    background-color: #ec755a; 
     color: white;
     border: none;
 }
 
 .custom-btn-inspirate:hover {
-    background-color: #e74c3c; /* Cambia a tu color deseado */
+    background-color: #e74c3c; 
     color: white;
 }
 
 .custom-btn-comparte {
-    background-color: #33ff57; /* Cambia a tu color deseado */
+    background-color: #33ff57; 
     color: white;
     border: none;
 }
 
 .custom-btn-comparte:hover {
-    background-color: #2ecc71; /* Cambia a tu color deseado */
+    background-color: #2ecc71; 
     color: white;
 }
 
 .custom-btn-organiza {
-    background-color: #3357ff; /* Cambia a tu color deseado */
+    background-color: #3357ff; 
     color: white;
     border: none;
 }
 
 .custom-btn-organiza:hover {
-    background-color: #3498db; /* Cambia a tu color deseado */
+    background-color: #3498db; 
     color: white;
 }
 .content {

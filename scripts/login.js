@@ -4,7 +4,7 @@ $(document).ready(function(){
         var password = $('#password').val();
 
         if(username === "root" && password === "12345"){
-            
+            localStorage.setItem('loggedInUser', username);
             window.location.href = "index.html"; 
         } else {
             alert("Usuario o contraseña incorrectos");
@@ -17,6 +17,16 @@ $(document).ready(function(){
 
 
     });
-   
+
+    //Ocultar iniciar y registrarse cuando hay un usuario con inicio de sesión
+    var loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+        $('#userProfile').show();
+        $('#userName').text(loggedInUser);
+        $('#loginButtons').hide();
+    } else {
+        $('#userProfile').hide();
+        $('#loginButtons').show();
+    }
 
 });

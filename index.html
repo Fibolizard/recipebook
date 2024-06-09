@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/style_landing_page.css" rel="stylesheet">
+    <link href="styles/style_sidebar.css" rel="stylesheet">
     
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="70">
@@ -34,7 +35,10 @@
             <div class="logo mb-4">
           
             </div>
-            <a href="#">
+            <a href="#" id="homeLink">
+                <img src="logos/house.svg" alt="Busqueda" id="homeIcon">
+                Inicio</a>
+            <a href="#" id="searchLink">
                 <img src="logos/search.svg" alt="Busqueda">
                 Busca</a>
             <a href="#">
@@ -46,14 +50,16 @@
             <a href="#">
                 <img src="logos/apple.svg">
                 Recetas</a>
-            <button class="btn btn-primary" id="login_landing">Inicia sesión</button>
-            <button class="btn btn-info">¡Regístrate!</button>
+                <div id="loginButtons">
+                    <button class="btn btn-primary">Inicia sesión</button>
+                    <button class="btn btn-info">¡Regístrate!</button>
+                </div>
         </div>
         <div class="content flex-fill">
             <div class="header d-flex justify-content-between align-items-center">
                 <div>
                     <a href="#" class="logo">
-                        <img src="logo.png" alt="RecipeBook Logo">
+                        <img src="logos/logo.png" alt="RecipeBook Logo">
                     </a>
                 </div>
                 <nav>
@@ -63,6 +69,12 @@
                 <div class="search-bar d-flex">
                     <input type="text" class="form-control" placeholder="Buscar recetas...">
                     <button class="btn btn-success">Buscar</button>
+                </div>
+                <div id="userProfile" style="display: none;">
+                    <a href="#">
+                    <img src="logos/profile.svg" alt="Foto de perfil" class="rounded-circle me-2">
+                    <span id="userName"></span>
+                    </a>
                 </div>
             </div>
             <div class="content-box mt-4">
@@ -115,5 +127,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/background_change.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/home-icon.js"></script>
 </body>
 </html>
