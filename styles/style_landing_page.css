@@ -5,21 +5,32 @@ body {
     background-color: #e9ecef;
     height: 100vh;
     padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .sidebar a {
-    color: #007bff;
-    display: block;
-    padding: 10px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
     text-decoration: none;
-    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
 .sidebar a:hover {
     background-color: #dee2e6;
     text-decoration: none;
 }
 .sidebar .btn {
-    margin: 10px 0;
-    width: 80%;
+    margin: 20px 0;
+    width: 100%;
+}
+.sidebar img {
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
 }
 .content {
     padding: 20px;
@@ -44,7 +55,7 @@ body {
     margin-right: 5px;
 }
 .logo img {
-    max-width: 100px;
+    max-width: 150px;
 }
 .content-box {
     background-color: #e9ecef;
