@@ -1,5 +1,14 @@
 body {
     background-color: #f8f9fa;
+    padding-top: 56px; /* Espacio para la barra de navegación fija */
+}
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section {
+    padding: 60px 20px;
+    margin-top: 10px; /* Para un poco de espacio entre secciones */
 }
 .sidebar {
     background-color: #e9ecef;
@@ -14,7 +23,7 @@ body {
     align-items: center;
     padding: 30px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     border-radius: 25px;
     margin-bottom: 10px;
@@ -29,8 +38,40 @@ body {
 }
 .sidebar img {
     margin-right: 15px;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
+}
+.custom-btn-inspirate {
+    background-color: #ec755a; /* Cambia a tu color deseado */
+    color: white;
+    border: none;
+}
+
+.custom-btn-inspirate:hover {
+    background-color: #e74c3c; /* Cambia a tu color deseado */
+    color: white;
+}
+
+.custom-btn-comparte {
+    background-color: #33ff57; /* Cambia a tu color deseado */
+    color: white;
+    border: none;
+}
+
+.custom-btn-comparte:hover {
+    background-color: #2ecc71; /* Cambia a tu color deseado */
+    color: white;
+}
+
+.custom-btn-organiza {
+    background-color: #3357ff; /* Cambia a tu color deseado */
+    color: white;
+    border: none;
+}
+
+.custom-btn-organiza:hover {
+    background-color: #3498db; /* Cambia a tu color deseado */
+    color: white;
 }
 .content {
     padding: 20px;
@@ -55,12 +96,38 @@ body {
     margin-right: 5px;
 }
 .logo img {
-    max-width: 150px;
+    max-width: 100px;
 }
+
 .content-box {
-    background-color: #e9ecef;
-    padding: 20px;
+    position: relative;
+    background-color: rgba(233, 236, 239, 0.5); /* Slightly transparent background */
+    padding: 35px;
+    height: 300px;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.background-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.background-container img.active {
+    opacity: 1;
 }
 .footer {
     text-align: center;
@@ -69,4 +136,10 @@ body {
 .footer a {
     margin: 0 10px;
     color: #000;
+}
+.description {
+    display: none;
+}
+.description.active {
+    display: block;
 }

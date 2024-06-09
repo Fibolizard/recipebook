@@ -9,7 +9,26 @@
     <link href="styles/style_landing_page.css" rel="stylesheet">
     
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">RecipeBook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobrenosotros">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="d-flex">
         <div class="sidebar d-flex flex-column align-items-center" width="300">
             <div class="logo mb-4">
@@ -38,9 +57,8 @@
                     </a>
                 </div>
                 <nav>
-                    <a href="#">Home</a>
-                    <a href="#">Recetas</a>
-                    <a href="#">Tienda y proveedores</a>
+                    <a href="#"></a>
+                   
                 </nav>
                 <div class="search-bar d-flex">
                     <input type="text" class="form-control" placeholder="Buscar recetas...">
@@ -48,48 +66,54 @@
                 </div>
             </div>
             <div class="content-box mt-4">
-                <h2>RecipeBook</h2>
-                <p>¡Descubre, comparte, y cocina!</p>
-                <h5>¿Qué es RecipeBook?</h5>
-                <p>
-                    RecipeBook es una comunidad en línea para amantes de la cocina.
-                    Aquí puedes explorar una amplia cantidad de recetas, compartir otras
-                    creaciones culinarias y conectarte con otros apasionados por la gastronomía.
-                </p>
-                <div class="row mt-4">
-                    <div class="col-md-4">
-                        <h6>¡Inspírate!</h6>
-                        <p>
-                            Busca cientos de recetas creadas tanto por profesionales como por usuarios.
-                            Puntúalas, déjales feedback, y sube tus propias creaciones.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h6>¡Comparte!</h6>
-                        <p>
-                            Puedes compartir tus recetas, negocios y productos en RecipeBook.
-                            Nuestros algoritmos están diseñados para generar tráfico a nuestros usuarios. ¡No dudes en publicar!
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h6>¡Organiza!</h6>
-                        <p>
-                            Puedes archivar recetas y productos según sus ingredientes, regiones, precios, y otros criterios de tu elección.
-                        </p>
-                    </div>
+                <div class="background-container">
+                    <img src="backgrounds/bg1.jpg" alt="Background 1" class="active">
+                    <img src="backgrounds/bg2.jpg" alt="Background 2">
+                    <img src="backgrounds/bg3.jpg" alt="Background 3">
+                </div>
+                <div class="button-group text-center">
+                    <button class="btn custom-btn-inspirate" data-target="inspirate">¡Inspírate!</button>
+                    <button class="btn custom-btn-comparte" data-target="comparte">¡Comparte!</button>
+                    <button class="btn custom-btn-organiza" data-target="organiza">¡Organiza!</button>
+                </div>
+                <div id="inspirate" class="description active">
+                    <h6 style="font-size: 30px;">¡Inspírate!</h6>
+                    <p style="font-size: 25px;">
+                        Busca cientos de recetas creadas tanto por profesionales como por usuarios.
+                        Puntúalas, déjales feedback, y sube tus propias creaciones.
+                    </p>
+                </div>
+                <div id="comparte" class="description">
+                    <h6 style="font-size: 30px;">¡Comparte!</h6>
+                    <p style="font-size: 25px;">
+                        Puedes compartir tus recetas, negocios y productos en RecipeBook.
+                        Nuestros algoritmos están diseñados para generar tráfico a nuestros usuarios. ¡No dudes en publicar!
+                    </p>
+                </div>
+                <div id="organiza" class="description">
+                    <h6 style="font-size: 30px;">¡Organiza!</h6>
+                    <p style="font-size: 25px;">
+                        Puedes archivar recetas y productos según sus ingredientes, regiones, precios, y otros criterios de tu elección.
+                    </p>
                 </div>
             </div>
-            <div class="footer mt-4">
-                <a href="#">@RecipeBook</a>
-                <a href="#">recipebook_2024</a>
-                <a href="#">RecipeBook</a>
-            </div>
+        
+        <div id="servicios">
+            <h2>Servicios</h2>
+            <p>prueba</p>
+        </div>
+        <div class="footer mt-4">
+            <a href="#">@RecipeBook</a>
+            <a href="#">recipebook_2024</a>
+            <a href="#">RecipeBook</a>
         </div>
     </div>
+    
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/login.js"></script>
+    <script src="scripts/background_change.js"></script>
 </body>
 </html>
