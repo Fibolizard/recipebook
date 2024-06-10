@@ -1,31 +1,53 @@
 $(document).ready(function() {
+    var recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+
+    function renderRecipes() {
+        $('#recipe-list').empty();
+        recipes.forEach(function(recipe, index) {
+            var recipeCard = `
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="${recipe.thumbnail}" class="card-img-top" alt="Imagen de receta">
+                        <div class="card-body">
+                            <h5 class="card-title">${recipe.name}</h5>
+                            <p class="card-text">${recipe.ingredients}</p>
+                            <p class="card-text"><small>${recipe.time}</small></p>
+                            <a href="recipe_detail.html?id=${index}" class="card-link">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#recipe-list').append(recipeCard);
+        });
+    }
+
     $('#publishRecipeButton').click(function() {
         var name = $('#recipe-name').val();
         var ingredients = $('#recipe-ingredients').val();
         var preparation = $('#recipe-preparation').val();
         var time = $('#recipe-time').val();
         var thumbnail = $('#recipe-thumbnail')[0].files[0];
+        var author = localStorage.getItem('loggedInUser') || 'Anónimo';
 
         if (name && ingredients && preparation && time && thumbnail) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 var thumbnailData = e.target.result;
 
-                var recipeCard = `
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="${thumbnailData}" class="card-img-top" alt="Imagen de receta">
-                            <div class="card-body">
-                                <h5 class="card-title">${name}</h5>
-                                <p class="card-text">${ingredients}</p>
-                                <p class="card-text"><small>${time}</small></p>
-                                <a href="#" class="card-link">Ver receta</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
+                var recipe = {
+                    name: name,
+                    ingredients: ingredients,
+                    preparation: preparation,
+                    time: time,
+                    thumbnail: thumbnailData,
+                    author: author,
+                    comments: [],
+                    ratings: []
+                };
 
-                $('#recipe-list').append(recipeCard);
+                recipes.push(recipe);
+                localStorage.setItem('recipes', JSON.stringify(recipes));
+                renderRecipes();
                 $('#publishModal').modal('hide');
                 $('#publishForm')[0].reset();
             };
@@ -34,4 +56,6 @@ $(document).ready(function() {
             alert('Por favor, completa todos los campos.');
         }
     });
+
+    renderRecipes();
 });

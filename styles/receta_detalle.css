@@ -1,0 +1,13 @@
+/* receta_detalle.css */
+.rating {
+    font-size: 2em;
+    color: gold;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star.selected {
+    color: orange;
+}
