@@ -8,18 +8,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/style_landing_page.css" rel="stylesheet">
     <link href="styles/style_sidebar.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="70">
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="#">RecipeBook</a>
+        <a class="navbar-brand" href="index.html">RecipeBook</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#sobrenosotros">Sobre Nosotros</a>
+                    <a class="nav-link" href="#sobrenosotros">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#servicios">Servicios</a>
@@ -55,6 +59,9 @@
                     <button class="btn btn-primary">Inicia sesión</button>
                     <button class="btn btn-info">¡Regístrate!</button>
                 </div>
+                <a href="#">
+                    <img src="logos/gear-fill.svg">
+                    Configuración</a>
                 <div id="userProfile" style="display: none;">
                     <a href="profile.html" class="menulink">
                     <img src="logos/profile.svg" alt="Foto de perfil" class="rounded-circle me-2" id="pfp">
@@ -64,11 +71,11 @@
         </div>
         <div class="content flex-fill">
             <div class="header d-flex justify-content-between align-items-center">
-                <div>
+                <div id="logoCenter" >
                     <a href="#" class="logo">
-                        <img src="logos/logo.png" alt="RecipeBook Logo" width="300px">
+                        <img src="logos/logo.png" alt="RecipeBook Logo" width="300px" class="center">
                     </a>
-                </div>
+            </div>
                 <nav>
                     <a href="#"></a>
                    
@@ -86,31 +93,44 @@
                     <button class="btn custom-btn-organiza" data-target="organiza">¡Organiza!</button>
                 </div>
                 <div id="inspirate" class="description active">
-                    <h6 style="font-size: 30px;">¡Inspírate!</h6>
-                    <p style="font-size: 25px;">
+                    <h6 style="font-size: 30px; font-family: JetBrains Mono;">¡Inspírate!</h6>
+                    <p style="font-size: 25px; font-family: JetBrains Mono;">
                         Busca cientos de recetas creadas tanto por profesionales como por usuarios.
                         Puntúalas, déjales feedback, y sube tus propias creaciones.
                     </p>
                 </div>
                 <div id="comparte" class="description">
-                    <h6 style="font-size: 30px;">¡Comparte!</h6>
-                    <p style="font-size: 25px;">
+                    <h6 style="font-size: 30px; font-family: JetBrains Mono;">¡Comparte!</h6>
+                    <p style="font-size: 25px; font-family: JetBrains Mono;">
                         Puedes compartir tus recetas, negocios y productos en RecipeBook.
                         Nuestros algoritmos están diseñados para generar tráfico a nuestros usuarios. ¡No dudes en publicar!
                     </p>
                 </div>
                 <div id="organiza" class="description">
-                    <h6 style="font-size: 30px;">¡Organiza!</h6>
-                    <p style="font-size: 25px;">
+                    <h6 style="font-size: 30px; font-family: JetBrains Mono;">¡Organiza!</h6>
+                    <p style="font-size: 25px; font-family: JetBrains Mono;">
                         Puedes archivar recetas y productos según sus ingredientes, regiones, precios, y otros criterios de tu elección.
                     </p>
                 </div>
             </div>
         
         <div id="servicios">
-            <h2>Servicios</h2>
-            <p>prueba</p>
+            <span style="font-size: 46px; color: #000000;">
+                Alcanza <strong>tus objetivos<br></strong> culinarios con <br><strong>nuestros servicios</strong>
+            </span>
+            <span style="font-size: 46px; color: #000000;"></span>
+            <p style="font-size: 25px; font-family: JetBrains Mono;">
+                <br>
+                Somos un pequeño grupo de desarrolladores, que busca dar a conocer la gastronomía alrededor del mundo. Con nuestros algoritmos, garantizamos que tanto<br>
+                restaurantes como proveedores de alimentos puedan prestar sus servicios en nuestra página. 
+            </p>
+            <br>
+                <p style="font-size:  25px; font-family: Jetbrains Mono;">
+                    RecipeBook pretende poder darte acceso a una comunidad en línea de chefs y aficionados, donde podrás recibir feedback <br>
+                    tanto de profesionales como otros usuarios. ¿A qué esperas para unirte?
+                </p>
         </div>
+        
         <div class="footer mt-4">
             <a href="#">@RecipeBook</a>
             <a href="#">recipebook_2024</a>

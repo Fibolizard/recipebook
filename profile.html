@@ -11,49 +11,41 @@
 <body>
     <header></header>
     <main>
-        <div class="d-flex">
-            <div class="sidebar d-flex flex-column align-items-center" width="300">
-                <div class="logo mb-4">
-              
-                </div>
-                <a href="index.html" id="homeLink">
-                    <img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon">
-                    Inicio</a>
-                <a href="search_results.html" id="searchLink">
-                    <img src="logos/search.svg" alt="Busqueda">
-                    Busca</a>
-                <a href="#">
-                    <img src="logos/egg-fried.svg">
-                    Restaurantes</a>
-                <a href="#">
-                    <img src="logos/basket2.svg">
-                    Proveedores</a>
-                <a href="recetas.html">
-                    <img src="logos/apple.svg">
-                    Recetas</a>
-                    <div id="loginButtons">
-                        <button class="btn btn-primary">Inicia sesión</button>
-                        <button class="btn btn-info">¡Regístrate!</button>
-                    </div>
-                    <div id="userProfile" style="display: none;">
-                        <a href="profile.html">
-                        <img src="logos/profile.svg" alt="Foto de perfil" class="rounded-circle me-2">
-                        <span id="userName"></span>
-                        </a>
-                    </div>
+           <!--SIDEBAR--->
+    <div class="d-flex">
+        <div class="sidebar d-flex flex-column align-items-center" width="300">
+            <div class="logo mb-4">
+          
             </div>
-            <div class="content flex-fill">
-                <div class="header d-flex justify-content-between align-items-center">
-                    <div>
-                        <a href="#" class="logo">
-                            <img src="logos/logo.png" alt="RecipeBook Logo" width="300px">
-                        </a>
-                    </div>
-                    <nav>
-                        <a href="#"></a>
-                       
-                    </nav>
+            <a href="index.html" id="homeLink">
+                <img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon">
+                Inicio</a>
+            <a href="search_results.html" id="searchLink">
+                <img src="logos/search.svg" alt="Busqueda">
+                Busca</a>
+            <a href="#">
+                <img src="logos/egg-fried.svg">
+                Restaurantes</a>
+            <a href="#">
+                <img src="logos/basket2.svg">
+                Proveedores</a>
+            <a href="recetas.html">
+                <img src="logos/apple.svg">
+                Recetas</a>
+                <div id="loginButtons">
+                    <button class="btn btn-primary">Inicia sesión</button>
+                    <button class="btn btn-info">¡Regístrate!</button>
                 </div>
+                <a href="#">
+                    <img src="logos/gear-fill.svg">
+                    Configuración</a>
+                <div id="userProfile" style="display: none;">
+                    <a href="profile.html" class="menulink">
+                    <img src="logos/profile.svg" alt="Foto de perfil" class="rounded-circle me-2" id="pfp">
+                    <span id="userName"></span>
+                    </a>
+                </div>
+        </div>
         <div class="profile-container">
             <h3 class="text-center">Edita tu Perfil</h3>
             <form id="profileForm">

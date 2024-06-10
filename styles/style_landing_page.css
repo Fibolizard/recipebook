@@ -5,6 +5,8 @@ body {
 .navbar {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    padding: 10px 20px;
 }
 .section {
     padding: 60px 20px;
@@ -37,8 +39,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-/*CSS de la Sidebar*/
-
 /*Botones de información */
 .custom-btn-inspirate {
     background-color: #ec755a; 
@@ -95,7 +95,11 @@ body {
     margin-right: 5px;
 }
 .logo img {
-    max-width: 100px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
 }
 
 .content-box {
