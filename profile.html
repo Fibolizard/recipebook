@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Editar Perfil</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles/style_login.css" rel="stylesheet">
+    <link hred="styles/style_sidebar.css" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="d-flex">
+            <div class="sidebar d-flex flex-column align-items-center" width="300">
+                <div class="logo mb-4">
+              
+                </div>
+                <a href="index.html" id="homeLink">
+                    <img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon">
+                    Inicio</a>
+                <a href="search_results.html" id="searchLink">
+                    <img src="logos/search.svg" alt="Busqueda">
+                    Busca</a>
+                <a href="#">
+                    <img src="logos/egg-fried.svg">
+                    Restaurantes</a>
+                <a href="#">
+                    <img src="logos/basket2.svg">
+                    Proveedores</a>
+                <a href="recetas.html">
+                    <img src="logos/apple.svg">
+                    Recetas</a>
+                    <div id="loginButtons">
+                        <button class="btn btn-primary">Inicia sesión</button>
+                        <button class="btn btn-info">¡Regístrate!</button>
+                    </div>
+                    <div id="userProfile" style="display: none;">
+                        <a href="profile.html">
+                        <img src="logos/profile.svg" alt="Foto de perfil" class="rounded-circle me-2">
+                        <span id="userName"></span>
+                        </a>
+                    </div>
+            </div>
+            <div class="content flex-fill">
+                <div class="header d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="logo">
+                            <img src="logos/logo.png" alt="RecipeBook Logo" width="300px">
+                        </a>
+                    </div>
+                    <nav>
+                        <a href="#"></a>
+                       
+                    </nav>
+                </div>
+        <div class="profile-container">
+            <h3 class="text-center">Edita tu Perfil</h3>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Usuario">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" class="form-control" id="email" placeholder="Correo">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                    <label for="profileImage">Imagen de Perfil</label>
+                    <input type="file" class="form-control-file" id="profileImage">
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="saveProfileButton">Guardar Cambios</button>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/profile.js"></script>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -3,22 +3,20 @@ $(document).ready(function(){
         var username = $('#username').val();
         var password = $('#password').val();
 
-        if(username === "root" && password === "12345"){
-            localStorage.setItem('loggedInUser', username);
-            window.location.href = "index.html"; 
+        if(username && password){
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            var user = users.find(user => user.username === username && user.password === password);
+
+            if(user){
+                localStorage.setItem('loggedInUser', username);
+                window.location.href = "index.html"; 
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
         } else {
-            alert("Usuario o contraseña incorrectos");
+            alert("Por favor, llena todos los campos");
         }
     });
-
-    $('#login_landing').click(function(){
-        window.location.href = "login.html"; 
-
-
-
-    });
-
-    //Ocultar iniciar y registrarse cuando hay un usuario con inicio de sesión
     var loggedInUser = localStorage.getItem('loggedInUser');
     if (loggedInUser) {
         $('#userProfile').show();
@@ -28,5 +26,4 @@ $(document).ready(function(){
         $('#userProfile').hide();
         $('#loginButtons').show();
     }
-
 });
