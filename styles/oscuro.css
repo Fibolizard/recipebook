@@ -76,5 +76,10 @@ body, input, textarea {
 
 /* Modal content */
 .modal-content {
-	background-color: #353535;
+	background-color: #353535 !important;
+}
+
+/* Login */
+.login-container {
+	background-color: #7b7b7b !important;
 }
