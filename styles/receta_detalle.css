@@ -1,4 +1,8 @@
-/* receta_detalle.css */
+/* Receta detalles */
+
+/* Importar variables */
+@import 'root.css';
+
 .rating {
     font-size: 2em;
     color: gold;

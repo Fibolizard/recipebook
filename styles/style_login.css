@@ -1,9 +1,12 @@
+
+@import 'root.css';
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: var(--background-color) !important;
 }
 .login-container {
     background-color: #e9ecef;

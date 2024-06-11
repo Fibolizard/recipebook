@@ -1,3 +1,7 @@
+
+@import 'root.css';
+
+
 .sidebar {
     background-color: #e9ecef;
     height: 100vh; /* Altura del 100% del viewport */

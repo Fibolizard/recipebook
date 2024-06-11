@@ -1,0 +1,66 @@
+/* Light theme css */
+
+/* Variables */
+:root {
+	--background-color: #f8f9fa !important;
+	--text-color: #000000 !important;
+}
+
+/* Body, Input, Textarea  */
+body, input, textarea {
+	background-color: var(--background-color) !important;
+	color: var(--text-color) !important;
+}
+
+/* Submit */
+[type="submit"]:not(:disabled) {
+	background-color: #007bff !important;
+	border-color: #007bff !important;
+}
+
+/* Navbar brand */
+.navbar-brand {
+	color: var(--text-color) !important;
+}
+
+/* Header */
+.header {
+	background-color: var(--background-color) !important;
+	color: var(--text-color) !important;
+}
+
+/* Nav Bar */
+.navbar {
+	background-color: var(--background-color) !important;
+	color: var(--text-color) !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	background-color: #007bff !important;
+	color: white !important;
+}
+
+.nav-link {
+	color: #007bff !important;
+}
+
+.nav-link:hover {
+	color: var(--text-color) !important;
+	background-color: #dee2e6 !important;
+}
+
+/* Sidebar */
+.sidebar {
+	background-color: #e9ecef !important;
+}
+
+.sidebar a {
+	background-color: #e9ecef !important;
+	color: var(--text-color) !important;
+	font-weight: 500 !important;
+}
+
+.sidebar a:hover {
+	background-color: #dee2e6 !important;
+	color: var(--text-color) !important;
+}
