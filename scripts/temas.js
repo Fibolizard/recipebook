@@ -1,13 +1,26 @@
+// Cambiar tema
 document.addEventListener('DOMContentLoaded', (event) => {
-	const themeToggleBtn = document.getElementById('theme-toggle');
-	const themeLink = document.getElementById('link-tema');
+	// Variables
+	const botonCambiarTema = document.getElementById('cambiar-tema');
+	const linkTema = document.getElementById('link-tema');
 
-	themeToggleBtn.addEventListener('click', () => {
-		// Check the current stylesheet and switch to the other
-		if (themeLink.getAttribute('href') === 'styles/claro.css') {
-			themeLink.setAttribute('href', 'styles/oscuro.css');
+	// Verificar si el usuario tiene preferencia de tema
+	// Dark = Oscuro, Light = Claro, Theme = Tema
+	const temaActual = localStorage.getItem('theme');
+	if (temaActual === 'dark') {
+		linkTema.setAttribute('href', 'styles/oscuro.css');
+	}
+
+	// Buton para cambiar tema
+	botonCambiarTema.addEventListener('click', () => {
+		if (linkTema.getAttribute('href') === 'styles/claro.css') {
+			// Guardar preferencia de usuario en local storage
+			linkTema.setAttribute('href', 'styles/oscuro.css');
+			localStorage.setItem('theme', 'dark');
 		} else {
-			themeLink.setAttribute('href', 'styles/claro.css');
+			// Guardar preferencia de usuario en local storage
+			linkTema.setAttribute('href', 'styles/claro.css');
+			localStorage.setItem('theme', 'light');
 		}
 	});
 });
