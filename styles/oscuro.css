@@ -64,3 +64,17 @@ body, input, textarea {
 	background-color: #6c757d !important;
 	color: var(--text-color) !important;
 }
+
+/* Card */
+.card {
+	background-color: #0c0a0a !important;
+}
+
+.card-text {
+	color: #cdcdcd !important;
+}
+
+/* Modal content */
+.modal-content {
+	background-color: #353535;
+}
