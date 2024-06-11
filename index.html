@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>RecipeBook - Home</title>
 		<link rel="icon" href="favicon.png" type="image/png">
-		<!-- Bootstrap CSS -->
+		<!-- Boootstrap -->
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Estilos -->
@@ -23,7 +23,6 @@
 
 	<!-- Body -->
 	<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
-		<!--Navbar-->
 		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 			<a class="navbar-brand" href="index.html">RecipeBook</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,12 +43,10 @@
 			</div>
 		</nav>
 
-		<!-- Sidebar --->
+		<!-- Barra de lado izquierdo -->
 		<div class="d-flex">
-			<div class="sidebar d-flex flex-column align-items-center" width="300"  id="inicio">
-				<div class="logo mb-4">
-
-				</div>
+			<div class="sidebar d-flex flex-column align-items-center" width="300" id="inicio">
+				<div class="logo mb-4"></div>
 				<a href="index.html" id="homeLink"> <img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon"> Inicio</a>
 				<a href="search_results.html" id="searchLink"> <img src="logos/search.svg" alt="Busqueda"> Busca</a>
 				<a href="#"> <img src="logos/egg-fried.svg"> Restaurantes</a>
@@ -71,7 +68,7 @@
 
 			<div class="content flex-fill">
 				<div class="header d-flex justify-content-between align-items-center">
-					<div id="logoCenter" >
+					<div id="logoCenter">
 						<a href="#" class="logo">
 							<img src="logos/logo.png" alt="RecipeBook Logo" width="300px" class="center">
 						</a>
@@ -81,7 +78,7 @@
 					</nav>
 				</div>
 				<div>
-					<div class="content-box mt-4" >
+					<div class="content-box mt-4">
 						<div class="background-container">
 							<img src="backgrounds/bg1.jpg" alt="Background 1" class="active">
 							<img src="backgrounds/bg2.jpg" alt="Background 2">
@@ -100,7 +97,7 @@
 							</p>
 						</div>
 						<div id="comparte" class="description">
-							<h6 style="font-size: 30px; ">¡Comparte!</h6>
+							<h6 style="font-size: 30px;">¡Comparte!</h6>
 							<p style="font-size: 25px; font-family: JetBrains Mono;">
 							Puedes compartir tus recetas, negocios y productos en RecipeBook.
 							Nuestros algoritmos están diseñados para generar tráfico a nuestros usuarios. ¡No dudes en publicar!
@@ -153,19 +150,22 @@
 											<div class="input"><input></div>
 										</div>
 										<div >
-
 										</div>
 									</fieldset>
 									<fieldset class="form-columns-2">
 										<div>
 											<label  placeholder="Enter your Correo" ><span>Correo</span><span >*</span></label>
 											<legend style="display: none;"></legend>
-											<div class="input"><input  name="email" required="" placeholder="@" type="email"  inputmode="email" autocomplete="email" value=""></div>
+											<div class="input"><input  name="email" required=""
+												placeholder="@" type="email"  inputmode="email"
+												autocomplete="email" value=""></div>
 										</div>
 										<div >
 											<label>Numero de teléfono*</span></label>
 											<legend  style="display: none;"></legend>
-											<div class="input"><input placeholder="Número de teléfono" type="tel" inputmode="tel" autocomplete="tel" value=""></div>
+											<div class="input"><input placeholder="Número de
+												teléfono" type="tel" inputmode="tel" autocomplete="tel"
+												value=""></div>
 										</div>
 									</fieldset>
 									<fieldset class="form-columns-1">
@@ -187,25 +187,23 @@
 									</div>
 								</form>
 							</div>
-
-
 							</span>
 					</div>
 				</div>
-
 				<div class="footer mt-4">
 					<a href="#">@RecipeBook</a>
 					<a href="#">recipebook_2024</a>
 					<a href="#">RecipeBook</a>
 				</div>
 			</div>
+		</div>
 
-			<!-- jQuery and Bootstrap JS -->
-			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-			<script src="scripts/login.js"></script>
-			<script src="scripts/background_change.js"></script>
-			<script src="scripts/search.js"></script>
-			<script src="scripts/home-icon.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+		<script src="scripts/login.js"></script>
+		<script src="scripts/background_change.js"></script>
+		<script src="scripts/search.js"></script>
+		<script src="scripts/home-icon.js"></script>
+		<script src="scripts/cargarfp.js"></script>
 	</body>
 </html>
