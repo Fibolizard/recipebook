@@ -39,7 +39,7 @@ $(document).ready(function() {
                     ingredients: ingredients,
                     preparation: preparation,
                     time: time,
-                    thumbnail: thumbnailData, 
+                    thumbnail: thumbnailData,
                     author: author,
                     comments: [],
                     ratings: []
