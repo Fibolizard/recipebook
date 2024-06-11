@@ -1,9 +1,9 @@
 $(document).ready(function() {
     var recipes = JSON.parse(localStorage.getItem('recipes')) || [];
 
-    function renderRecipes() {
+    function renderRecipes(recipesToRender = recipes) {
         $('#recipe-list').empty();
-        recipes.forEach(function(recipe, index) {
+        recipesToRender.forEach(function(recipe, index) {
             var recipeCard = `
                 <div class="col-md-4">
                     <div class="card">
@@ -19,6 +19,18 @@ $(document).ready(function() {
             `;
             $('#recipe-list').append(recipeCard);
         });
+    }
+
+    function filterRecipes(query) {
+        const filteredRecipes = recipes.filter(recipe => {
+            const { name, ingredients } = recipe;
+            const lowerCaseQuery = query.toLowerCase();
+            return (
+                name.toLowerCase().includes(lowerCaseQuery) ||
+                ingredients.toLowerCase().includes(lowerCaseQuery)
+            );
+        });
+        return filteredRecipes;
     }
 
     $('#publishRecipeButton').click(function() {
@@ -54,6 +66,16 @@ $(document).ready(function() {
             reader.readAsDataURL(thumbnail);
         } else {
             alert('Por favor, completa todos los campos.');
+        }
+    });
+
+    $('#search-button').click(function() {
+        const searchQuery = $('#search-input').val().trim();
+        if (searchQuery !== '') {
+            const filteredRecipes = filterRecipes(searchQuery);
+            renderRecipes(filteredRecipes);
+        } else {
+            renderRecipes(recipes);
         }
     });
 
