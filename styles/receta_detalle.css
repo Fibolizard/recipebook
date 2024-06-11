@@ -1,3 +1,21 @@
+/* Receta detalles */
+
+/* Importar variables */
+@import 'root.css';
+
+.rating {
+    font-size: 2em;
+    color: gold;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star.selected {
+    color: orange;
+}
+
 .comment {
     display: flex;
     align-items: center;
