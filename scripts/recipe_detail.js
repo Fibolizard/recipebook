@@ -11,11 +11,19 @@ $(document).ready(function() {
         $('#recipe-ingredients').text(recipe.ingredients);
         $('#recipe-preparation').text(recipe.preparation);
         $('#recipe-time').text(recipe.time);
-
+        
         function renderComments() {
             $('#comments-section').empty();
             recipe.comments.forEach(function(comment) {
-                var commentHtml = `<p>${comment}</p>`;
+                var commentHtml = `
+                    <div class="comment">
+                        <img src="${comment.profilePicture}" class="comment-profile-picture" alt="Foto de perfil">
+                        <div class="comment-details">
+                            <p><strong>${comment.username}</strong></p>
+                            <p>${comment.text}</p>
+                        </div>
+                    </div>
+                `;
                 $('#comments-section').append(commentHtml);
             });
         }
@@ -32,13 +40,21 @@ $(document).ready(function() {
         $('#add-comment').click(function() {
             var comment = $('#new-comment').val();
             if (comment) {
-                recipe.comments.push(comment);
+                var loggedInUser = localStorage.getItem('loggedInUser') || 'Anónimo';
+                var profilePicture = 'logos/profile.svg'; // Cambia esta ruta si tienes una ubicación diferente para la imagen de perfil
+        
+                var commentObject = {
+                    text: comment,
+                    username: loggedInUser,
+                    profilePicture: profilePicture
+                };
+        
+                recipe.comments.push(commentObject);
                 localStorage.setItem('recipes', JSON.stringify(recipes));
                 renderComments();
                 $('#new-comment').val('');
             }
         });
-
         $('.star').click(function() {
             $('.star').removeClass('selected');
             $(this).addClass('selected');
