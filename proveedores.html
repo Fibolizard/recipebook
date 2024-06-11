@@ -23,9 +23,9 @@
 					<img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon"> Inicio</a>
 				<a href="search_results.html" id="searchLink">
 					<img src="logos/search.svg" alt="Busqueda"> Busca</a>
-				<a href="#">
+				<a href="restaurantes.html">
 					<img src="logos/egg-fried.svg"> Restaurantes</a>
-				<a href="#">
+				<a href="proveedores.html">
 					<img src="logos/basket2.svg"> Proveedores</a>
 				<a href="recetas.html">
 					<img src="logos/apple.svg"> Recetas</a>
@@ -45,7 +45,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1>RecipeBook</h1>
+						<h1>RecipeBook: Proveedores</h1>
 					</div>
 				</div>
 				<div class="row search-bar">
@@ -66,7 +66,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Más recetas aquí -->
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 					<div class="modal-body">
 						<form id="publishForm">
 							<div class="mb-3">
-								<label for="recipe-name" class="form-label">Nombre del restaurante</label>
+								<label for="recipe-name" class="form-label">Nombre del proveedor (Personal u organización)</label>
 								<input type="text" class="form-control" id="recipe-name" required>
 							</div>
 							<div class="mb-3">
@@ -92,15 +92,15 @@
 								<input type="file" class="form-control" id="recipe-thumbnail" accept="image/*" required>
 							</div>
 							<div class="mb-3">
-								<label for="recipe-ingredients" class="form-label">Dirección del restaurante/Ubicación</label>
+								<label for="recipe-ingredients" class="form-label">Productos (Frutas, verduras, carnes...)</label>
 								<textarea class="form-control" id="recipe-ingredients" rows="3" required></textarea>
 							</div>
 							<div class="mb-3">
-								<label for="recipe-preparation" class="form-label">Descripción</label>
+								<label for="recipe-preparation" class="form-label">Precios</label>
 								<textarea class="form-control" id="recipe-preparation" rows="3" required></textarea>
 							</div>
 							<div class="mb-3">
-								<label for="recipe-time" class="form-label">Platos destacados</label>
+								<label for="recipe-time" class="form-label">Ubicación</label>
 								<input type="text" class="form-control" id="recipe-time" required>
 							</div>
 							<button type="button" class="btn btn-primary" id="publishRecipeButton">Publicar</button>

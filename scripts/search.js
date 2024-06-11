@@ -1,70 +1,45 @@
 $(document).ready(function() {
-    // Datos de ejemplo para recetas, restaurantes y proveedores
-    var recipes = [
-        { name: 'Pasta Carbonara', category: 'Receta' },
-        { name: 'Pizza Margherita', category: 'Receta' },
-        { name: 'Sushi Vegano', category: 'Receta' }
-    ];
-
-    var restaurants = [
-        { name: 'La Trattoria', category: 'Restaurante' },
-        { name: 'Sushi House', category: 'Restaurante' },
-        { name: 'Vegan Delight', category: 'Restaurante' }
-    ];
-
-    var providers = [
-        { name: 'Organic Farms', category: 'Proveedor' },
-        { name: 'Fisherman\'s Co-op', category: 'Proveedor' },
-        { name: 'Artisan Bakery', category: 'Proveedor' }
-    ];
-
-    function searchAndDisplayResults(searchQuery) {
-        var results = [];
-
-        // Buscar en recetas
-        recipes.forEach(function(recipe) {
-            if (recipe.name.toLowerCase().includes(searchQuery)) {
-                results.push(recipe);
-            }
+    var recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    function renderRecipes(recipesToRender = recipes) {
+        $('#recipe-list').empty();
+        recipesToRender.forEach(function(recipe, index) {
+            var recipeCard = `
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="${recipe.thumbnail}" class="card-img-top" alt="Imagen de receta">
+                        <div class="card-body">
+                            <h5 class="card-title">${recipe.name}</h5>
+                            <p class="card-text">${recipe.ingredients}</p>
+                            <p class="card-text"><small>${recipe.time}</small></p>
+                            <a href="recipe_detail.html?id=${index}" class="card-link">Ver receta</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#recipe-list').append(recipeCard);
         });
-
-        // Buscar en restaurantes
-        restaurants.forEach(function(restaurant) {
-            if (restaurant.name.toLowerCase().includes(searchQuery)) {
-                results.push(restaurant);
-            }
-        });
-
-        // Buscar en proveedores
-        providers.forEach(function(provider) {
-            if (provider.name.toLowerCase().includes(searchQuery)) {
-                results.push(provider);
-            }
-        });
-
-        return results;
     }
-    $('#searchLink').click(function(e) {
-      
-            window.location.href = "search_results.html";
-        
-    });
-
-    // Evento de búsqueda desde el botón en search_results.html
+    function filterRecipes(query) {
+        const filteredRecipes = recipes.filter(recipe => {
+            const { name, ingredients } = recipe;
+            const lowerCaseQuery = query.toLowerCase();
+            return (
+                name.toLowerCase().includes(lowerCaseQuery) ||
+                ingredients.toLowerCase().includes(lowerCaseQuery)
+            );
+        });
+        return filteredRecipes;
+    }
     $('#searchButton').click(function() {
-        var searchQuery = $('#searchInput').val().toLowerCase();
-        var results = searchAndDisplayResults(searchQuery);
-
-        // Mostrar resultados
-        $('.results-container').empty();
-        if (results.length > 0) {
-            results.forEach(function(result) {
-                var resultItem = $('<div class="result-item"></div>');
-                resultItem.text(result.name + ' - ' + result.category);
-                $('.results-container').append(resultItem);
-            });
+        const searchQuery = $('#searchInput').val().trim();
+        if (searchQuery !== '') {
+            const filteredRecipes = filterRecipes(searchQuery);
+            renderRecipes(filteredRecipes);
         } else {
-            $('.results-container').text('No se encontraron resultados');
+            renderRecipes(recipes);
         }
     });
+
+    renderRecipes();
+
 });

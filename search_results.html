@@ -23,13 +23,25 @@
 		</nav>
 		<!-- Barra de lado izquierdo -->
 		<div class="d-flex">
-			<div class="sidebar d-flex flex-column align-items-center" width="300" id="inicio">
-				<div class="logo mb-4"></div>
-				<a href="index.html" id="homeLink"> <img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon"> Inicio</a>
-				<a href="search_results.html" id="searchLink"> <img src="logos/search.svg" alt="Busqueda"> Busca</a>
-				<a href="#"> <img src="logos/egg-fried.svg"> Restaurantes</a>
-				<a href="proveedores.html"> <img src="logos/basket2.svg"> Proveedores</a>
-				<a href="recetas.html"> <img src="logos/apple.svg"> Recetas</a>
+			<div class="sidebar d-flex flex-column align-items-center" width="300">
+				<div class="logo mb-4">
+
+				</div>
+				<a href="index.html" id="homeLink">
+					<img src="logos/house-fill.svg" alt="Busqueda" id="homeIcon">
+					Inicio</a>
+				<a href="search_results.html" id="searchLink">
+					<img src="logos/search.svg" alt="Busqueda">
+					Busca</a>
+				<a href="#">
+					<img src="logos/egg-fried.svg">
+					Restaurantes</a>
+				<a href="#">
+					<img src="logos/basket2.svg">
+					Proveedores</a>
+				<a href="recetas.html">
+					<img src="logos/apple.svg">
+					Recetas</a>
 				<a href="configuracion.html"> <img src="logos/gear-fill.svg"> Configuración</a>
 				<a href="acerca.html"> <img src="logos/acerca.svg"> Acerca</a>
 				<div id="userProfile" style="display: none;">
@@ -50,7 +62,17 @@
 					<button class="btn btn-success" id="searchButton">Buscar</button>
 				</div>
 				<div class="results-container">
-					<!-- Aquí se mostrarán los resultados de búsqueda -->
+					<div class="row recipe-list" id="recipe-list">
+						<div class="col-md-4">
+							<div class="card">
+								<img src="posteos/budino_cioccolato_cocco2.png" class="card-img-top" alt="Imagen de receta">
+								<div class="card-body">
+									<h5 class="card-title">Postre de chocolate</h5>
+									<p class="card-text">Un delicioso postre de chocolate que te encantará.</p>
+									<a href="#" class="card-link">Ver receta</a>
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 
